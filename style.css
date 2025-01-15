@@ -61,18 +61,37 @@ body,button{
 }
 button{
     border:none;
-    padding: 7px;
+    padding: 10px;
     border-radius: 20px;
-    width: 50%;
+    width: 45%;
     font-weight: 600;
     margin-left: 15%;
+    cursor: pointer;
+    font-size: 12px;
 }
+
 .one button{
     color: var(--bg-orange);
 }
+
 .two button{
     color: var(--bg-lgreen);
 }
 .three button{
     color: var(--bg-dgreen);
 }
+.one button:hover,.one button:active{
+    background: var(--bg-orange);
+    color: white;
+    border: 2px solid white;
+    }
+.two button:hover,.two button:active{
+    background: var(--bg-lgreen);
+    color: white;
+    border: 2px solid white;
+    }
+.three button:hover,.three button:active{
+    background: var(--bg-dgreen);
+    color: white;
+    border: 2px solid white;
+    }
