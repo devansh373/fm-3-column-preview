@@ -1,97 +1,131 @@
-:root{
-    --bg-orange:hsl(31, 77%, 52%);
-    --bg-lgreen:hsl(184, 100%, 22%);
-    --bg-dgreen:hsl(179, 100%, 13%);
-    --headings-color:hsl(0, 0%, 95%);
+:root {
+  --bg-orange: hsl(31, 77%, 52%);
+  --bg-lgreen: hsl(184, 100%, 22%);
+  --bg-dgreen: hsl(179, 100%, 13%);
+  --headings-color: hsl(0, 0%, 95%);
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Lexend Deca";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca";
 }
-body{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
 }
-.wrapper{
-    width: 800px;
-    height: 400px;
-    display: flex;
+.wrapper {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  /* flex-wrap: wrap; */
 }
-.wrapper>div{
-    height: 100%;
-    width: 33%;
+.wrapper > div {
+  height: 100%;
+  width: 33%;
 }
-.wrapper div.main{
-    height: 80%;
-    padding: 40px;
-    display: flex;
+.wrapper div.main {
+  height: 80%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 13px;
+  line-height: 22px;
+}
+svg {
+  transform: scale(0.9);
+}
+h2 {
+  color: var(--headings-color);
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.one {
+  background: var(--bg-orange);
+}
+.two {
+  background: var(--bg-lgreen);
+}
+.three {
+  background: var(--bg-dgreen);
+}
+.wrapper p {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+body,
+button {
+  background-color: var(--headings-color);
+}
+button {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  width: 45%;
+  font-weight: 600;
+  margin-left: 15%;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.one button {
+  color: var(--bg-orange);
+}
+
+.two button {
+  color: var(--bg-lgreen);
+}
+.three button {
+  color: var(--bg-dgreen);
+}
+.one button:hover,
+.one button:active {
+  background: var(--bg-orange);
+  color: white;
+  border: 2px solid white;
+}
+.two button:hover,
+.two button:active {
+  background: var(--bg-lgreen);
+  color: white;
+  border: 2px solid white;
+}
+.three button:hover,
+.three button:active {
+  background: var(--bg-dgreen);
+  color: white;
+  border: 2px solid white;
+}
+
+@media (max-width: 700px) {
+    body{
+        width: 100%;
+        height: auto;
+
+    }
+  .wrapper {
+    padding: 10% 6%;
+    width: 350px;
+    min-width: 350px;
+    height: auto;
     flex-direction: column;
-    justify-content: space-around;
-    font-size: 13px;
-    line-height: 22px;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrapper>div{
+    width: 100%;
+    height: 350px;
+  }
+  p{
+    font-size: 14px;
+    margin-bottom: -12%;
+  }
+  button{
+    margin-top: -9%;
+  }
 }
-svg{
-    transform: scale(0.9);
-}
-h2{
-    color: var(--headings-color);
-    font-family: "Big Shoulders Display";
-    text-transform: uppercase;
-    font-size: 2rem;
-}
-.one{
-    background: var(--bg-orange);
-}
-.two{
-    background: var(--bg-lgreen);
-}
-.three{
-    background: var(--bg-dgreen);
-}
-.wrapper p{
-    color: hsla(0, 0%, 100%, 0.75);
-}
-body,button{
-    background-color: var(--headings-color);
-}
-button{
-    border:none;
-    padding: 10px;
-    border-radius: 20px;
-    width: 45%;
-    font-weight: 600;
-    margin-left: 15%;
-    cursor: pointer;
-    font-size: 12px;
-}
-
-.one button{
-    color: var(--bg-orange);
-}
-
-.two button{
-    color: var(--bg-lgreen);
-}
-.three button{
-    color: var(--bg-dgreen);
-}
-.one button:hover,.one button:active{
-    background: var(--bg-orange);
-    color: white;
-    border: 2px solid white;
-    }
-.two button:hover,.two button:active{
-    background: var(--bg-lgreen);
-    color: white;
-    border: 2px solid white;
-    }
-.three button:hover,.three button:active{
-    background: var(--bg-dgreen);
-    color: white;
-    border: 2px solid white;
-    }
